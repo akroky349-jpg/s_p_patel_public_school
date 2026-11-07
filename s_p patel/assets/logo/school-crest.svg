@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E7CA85" />
+      <stop offset="50%" stop-color="#D4AF65" />
+      <stop offset="100%" stop-color="#9C782B" />
+    </linearGradient>
+    <linearGradient id="crestNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#163756" />
+      <stop offset="100%" stop-color="#0A1C2C" />
+    </linearGradient>
+    <filter id="crestShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Outer Circular Ring with Beaded border -->
+  <circle cx="60" cy="60" r="56" fill="url(#crestNavy)" stroke="url(#crestGold)" stroke-width="3" filter="url(#crestShadow)" />
+  <circle cx="60" cy="60" r="51" fill="none" stroke="#D4AF65" stroke-width="1" stroke-dasharray="2,3" opacity="0.8" />
+
+  <!-- Shield Frame -->
+  <path d="M 60 22 C 78 22, 90 30, 90 42 C 90 68, 69 84, 60 90 C 51 84, 30 68, 30 42 C 30 30, 42 22, 60 22 Z" 
+        fill="#0D2439" stroke="url(#crestGold)" stroke-width="2" />
+
+  <!-- Torch of Knowledge -->
+  <path d="M 58 48 L 62 48 L 61 60 L 59 60 Z" fill="url(#crestGold)" />
+  <!-- Flame -->
+  <path d="M 60 32 C 63 37, 65 41, 62 45 C 60 46, 58 44, 57 42 C 56 44, 55 45, 57 46 C 59 47, 61 47, 63 46 C 65 43, 65 38, 60 32 Z" 
+        fill="#FFB03A" />
+
+  <!-- Open Book of Wisdom -->
+  <path d="M 60 63 C 55 60, 45 59, 37 62 L 37 73 C 45 69, 55 70, 60 74 C 65 70, 75 69, 83 73 L 83 62 C 75 59, 65 60, 60 63 Z" 
+        fill="#FFFFFF" stroke="#D4AF65" stroke-width="1.2" />
+  <line x1="60" y1="63" x2="60" y2="74" stroke="#9C782B" stroke-width="1.2" />
+
+  <!-- Laurel Leaves -->
+  <g fill="#D4AF65">
+    <path d="M 37 46 C 35 43, 39 42, 41 44 C 42 46, 39 48, 37 46 Z" />
+    <path d="M 36 53 C 34 50, 38 49, 40 51 C 41 53, 38 55, 36 53 Z" />
+    <path d="M 83 46 C 85 43, 81 42, 79 44 C 78 46, 81 48, 83 46 Z" />
+    <path d="M 84 53 C 86 50, 82 49, 80 51 C 79 53, 82 55, 84 53 Z" />
+  </g>
+
+  <!-- Stars -->
+  <polygon points="60,25 61.5,29 65.5,29 62,31.5 63.5,35.5 60,33 56.5,35.5 58,31.5 54.5,29 58.5,29" fill="url(#crestGold)" />
+
+  <!-- Upper Arch Text -->
+  <path id="textPathTop" d="M 17 60 A 43 43 0 0 1 103 60" fill="none" />
+  <text font-family="'DM Sans', sans-serif" font-size="7.5" font-weight="700" fill="#E7CA85" letter-spacing="1.8">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
+      S. P. PATEL PUBLIC SCHOOL
+    </textPath>
+  </text>
+
+  <!-- Lower Arch Text -->
+  <path id="textPathBottom" d="M 103 60 A 43 43 0 0 1 17 60" fill="none" />
+  <text font-family="'DM Sans', sans-serif" font-size="7" font-weight="600" fill="#D4AF65" letter-spacing="1.5">
+    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">
+      BHANAURI • PRAYAGRAJ
+    </textPath>
+  </text>
+</svg>

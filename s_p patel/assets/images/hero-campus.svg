@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90E2" />
+      <stop offset="60%" stop-color="#BEE3F8" />
+      <stop offset="100%" stop-color="#EDF2F7" />
+    </linearGradient>
+    <linearGradient id="navyDeep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102B45" />
+      <stop offset="100%" stop-color="#081726" />
+    </linearGradient>
+    <linearGradient id="goldLuxe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3DC9B" />
+      <stop offset="50%" stop-color="#D4AF65" />
+      <stop offset="100%" stop-color="#9C782B" />
+    </linearGradient>
+    <linearGradient id="brickGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2847A" />
+      <stop offset="100%" stop-color="#B85449" />
+    </linearGradient>
+    <linearGradient id="stoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4EFE6" />
+      <stop offset="100%" stop-color="#D6CEBE" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBF8FF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#90CDF4" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="grassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#48BB78" />
+      <stop offset="100%" stop-color="#2F855A" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="cardDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F2438" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="700" fill="url(#skyGrad)" />
+  <!-- Sun &amp; Clouds -->
+  <circle cx="1050" cy="120" r="60" fill="#FFF4D0" opacity="0.8" />
+  <ellipse cx="250" cy="110" rx="90" ry="25" fill="#FFFFFF" opacity="0.6" />
+  <ellipse cx="290" cy="95" rx="60" ry="30" fill="#FFFFFF" opacity="0.6" />
+  <ellipse cx="780" cy="140" rx="110" ry="30" fill="#FFFFFF" opacity="0.5" />
+  
+  <!-- Campus Lawn -->
+  <path d="M 0 460 Q 600 440, 1200 460 L 1200 700 L 0 700 Z" fill="url(#grassGrad)" />
+  
+  <!-- Trees Left &amp; Right -->
+  <g fill="#276749">
+    <ellipse cx="80" cy="420" rx="70" ry="110" />
+    <ellipse cx="140" cy="440" rx="55" ry="90" />
+    <ellipse cx="1080" cy="420" rx="80" ry="120" />
+    <ellipse cx="1140" cy="440" rx="60" ry="100" />
+  </g>
+  <g fill="#38A169" opacity="0.7">
+    <ellipse cx="75" cy="405" rx="50" ry="90" />
+    <ellipse cx="1085" cy="400" rx="60" ry="95" />
+  </g>
+
+  <!-- Paved Grand Pathway -->
+  <polygon points="500,700 700,700 640,480 560,480" fill="#E2E8F0" />
+  <polygon points="520,700 680,700 630,480 570,480" fill="#EDF2F7" />
+
+  <!-- Main Academic Building - Central Wing -->
+  <!-- Left Wing -->
+  <rect x="220" y="290" width="240" height="190" fill="url(#stoneGrad)" stroke="#102B45" stroke-width="2" />
+  <!-- Left Wing Windows -->
+  <g fill="url(#glassGrad)" stroke="#102B45" stroke-width="1.5">
+    <rect x="245" y="320" width="35" height="45" rx="2" /><rect x="295" y="320" width="35" height="45" rx="2" /><rect x="345" y="320" width="35" height="45" rx="2" /><rect x="395" y="320" width="35" height="45" rx="2" />
+    <rect x="245" y="390" width="35" height="55" rx="2" /><rect x="295" y="390" width="35" height="55" rx="2" /><rect x="345" y="390" width="35" height="55" rx="2" /><rect x="395" y="390" width="35" height="55" rx="2" />
+  </g>
+
+  <!-- Right Wing -->
+  <rect x="740" y="290" width="240" height="190" fill="url(#stoneGrad)" stroke="#102B45" stroke-width="2" />
+  <!-- Right Wing Windows -->
+  <g fill="url(#glassGrad)" stroke="#102B45" stroke-width="1.5">
+    <rect x="765" y="320" width="35" height="45" rx="2" /><rect x="815" y="320" width="35" height="45" rx="2" /><rect x="865" y="320" width="35" height="45" rx="2" /><rect x="915" y="320" width="35" height="45" rx="2" />
+    <rect x="765" y="390" width="35" height="55" rx="2" /><rect x="815" y="390" width="35" height="55" rx="2" /><rect x="865" y="390" width="35" height="55" rx="2" /><rect x="915" y="390" width="35" height="55" rx="2" />
+  </g>
+
+  <!-- Grand Central Block -->
+  <rect x="440" y="220" width="320" height="260" fill="#FFFFFF" stroke="#102B45" stroke-width="3" />
+  <!-- Neoclassical Pediment (Triangle Top) -->
+  <polygon points="420,220 600,120 780,220" fill="url(#stoneGrad)" stroke="#102B45" stroke-width="3" />
+  
+  <!-- Clock Tower Dome -->
+  <rect x="560" y="70" width="80" height="60" fill="url(#navyDeep)" stroke="#D4AF65" stroke-width="2" />
+  <circle cx="600" cy="100" r="18" fill="#FFFFFF" stroke="#D4AF65" stroke-width="2" />
+  <!-- Clock hands -->
+  <line x1="600" y1="100" x2="600" y2="88" stroke="#102B45" stroke-width="2" stroke-linecap="round" />
+  <line x1="600" y1="100" x2="609" y2="103" stroke="#102B45" stroke-width="1.8" stroke-linecap="round" />
+  <!-- Spire &amp; Flagpole -->
+  <line x1="600" y1="70" x2="600" y2="25" stroke="#D4AF65" stroke-width="2.5" />
+  <!-- Indian National Flag -->
+  <rect x="600" y="27" width="35" height="7" fill="#FF9933" />
+  <rect x="600" y="34" width="35" height="7" fill="#FFFFFF" />
+  <circle cx="617.5" cy="37.5" r="2.8" fill="#000080" />
+  <rect x="600" y="41" width="35" height="7" fill="#138808" />
+
+  <!-- School Name in Pediment -->
+  <text x="600" y="195" font-family="'Playfair Display', serif" font-size="16" font-weight="700" fill="#102B45" text-anchor="middle" letter-spacing="1.5">S. P. PATEL PUBLIC SCHOOL</text>
+  <text x="600" y="212" font-family="'DM Sans', sans-serif" font-size="9" font-weight="700" fill="#D4AF65" text-anchor="middle" letter-spacing="2">BHANAURI, BELSARA, PRAYAGRAJ</text>
+
+  <!-- Grand Pillars -->
+  <g fill="url(#stoneGrad)" stroke="#102B45" stroke-width="1.5">
+    <rect x="470" y="240" width="22" height="230" /><rect x="525" y="240" width="22" height="230" />
+    <rect x="655" y="240" width="22" height="230" /><rect x="710" y="240" width="22" height="230" />
+  </g>
+  <!-- Grand Arched Portal Entrance -->
+  <path d="M 565 470 L 565 350 Q 600 320, 635 350 L 635 470 Z" fill="#102B45" />
+  <path d="M 575 470 L 575 365 Q 600 340, 625 365 L 625 470 Z" fill="url(#goldLuxe)" opacity="0.3" />
+
+  <!-- Students Walking on Lawn / Pathway -->
+  <!-- Student 1 -->
+  <circle cx="560" cy="540" r="10" fill="#F6AD55" />
+  <rect x="553" y="550" width="14" height="30" rx="3" fill="#102B45" />
+  <rect x="555" y="580" width="4" height="25" fill="#4A5568" />
+  <rect x="561" y="580" width="4" height="25" fill="#4A5568" />
+  <!-- Backpack -->
+  <rect x="548" y="553" width="6" height="18" rx="2" fill="#D4AF65" />
+
+  <!-- Student 2 -->
+  <circle cx="590" cy="550" r="10" fill="#ED8936" />
+  <rect x="583" y="560" width="14" height="28" rx="3" fill="#FFFFFF" stroke="#102B45" />
+  <rect x="583" y="588" width="14" height="15" fill="#102B45" />
+  <rect x="585" y="603" width="4" height="22" fill="#4A5568" />
+  <rect x="591" y="603" width="4" height="22" fill="#4A5568" />
+
+  <!-- Student 3 -->
+  <circle cx="635" cy="535" r="9.5" fill="#FBD38D" />
+  <rect x="628" y="545" width="14" height="30" rx="3" fill="#102B45" />
+  <rect x="630" y="575" width="4" height="25" fill="#4A5568" />
+  <rect x="636" y="575" width="4" height="25" fill="#4A5568" />
+
+  <!-- Floral Shrubs &amp; Flower Beds -->
+  <g fill="#E53E3E" opacity="0.85">
+    <circle cx="340" cy="485" r="6" /><circle cx="355" cy="480" r="8" /><circle cx="370" cy="487" r="7" />
+    <circle cx="830" cy="485" r="6" /><circle cx="845" cy="480" r="8" /><circle cx="860" cy="487" r="7" />
+  </g>
+  <g fill="#ECC94B">
+    <circle cx="348" cy="482" r="5" /><circle cx="362" cy="488" r="6" />
+    <circle cx="838" cy="482" r="5" /><circle cx="852" cy="488" r="6" />
+  </g>
+
+  <!-- Premium Vignette Banner Overlay at bottom -->
+  <rect x="0" y="640" width="1200" height="60" fill="url(#navyDeep)" opacity="0.9" />
+  <line x1="0" y1="640" x2="1200" y2="640" stroke="url(#goldLuxe)" stroke-width="3" />
+  <text x="60" y="675" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="1">
+    S. P. PATEL PUBLIC SCHOOL • CAMPUS OVERVIEW
+  </text>
+  <text x="1140" y="675" font-family="'DM Sans', sans-serif" font-size="13" font-weight="600" fill="#D4AF65" text-anchor="end" letter-spacing="1">
+    BHANAURI, BELSARA, PRAYAGRAJ
+  </text>
+
+</svg>

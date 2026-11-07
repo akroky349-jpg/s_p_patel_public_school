@@ -1,0 +1,357 @@
+/* ==========================================================================
+   S. P. PATEL PUBLIC SCHOOL — MAIN STYLESHEET
+   Design System: Navy Blue (#102B45), Gold (#D4AF65), White (#FFFFFF), Warm Cream (#F4F1E9)
+   Typography: Headings: Playfair Display | Body: DM Sans
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  /* Core Brand Colors */
+  --color-primary: #102B45;
+  --color-primary-dark: #0A1C2C;
+  --color-primary-light: #1B436B;
+  --color-secondary: #D4AF65;
+  --color-secondary-light: #E7CA85;
+  --color-secondary-dark: #A88338;
+  --color-secondary-subtle: #F8F3E6;
+  --color-white: #FFFFFF;
+  --color-cream: #F4F1E9;
+  --color-cream-light: #FAF8F5;
+  --color-cream-dark: #E8E2D3;
+
+  /* Neutral & Text Colors */
+  --color-text-main: #1E293B;
+  --color-text-muted: #526377;
+  --color-text-light: #F8FAFC;
+  --color-border: #DDD8CD;
+  --color-border-light: #EBE6DA;
+  --color-border-gold: rgba(212, 175, 101, 0.4);
+
+  /* Status Colors */
+  --color-success: #15803D;
+  --color-success-bg: #DCFCE7;
+  --color-error: #B91C1C;
+  --color-error-bg: #FEE2E2;
+  --color-info: #0369A1;
+  --color-info-bg: #E0F2FE;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevations & Shadows */
+  --shadow-xs: 0 1px 3px rgba(16, 43, 69, 0.05);
+  --shadow-sm: 0 2px 6px rgba(16, 43, 69, 0.06);
+  --shadow-md: 0 6px 18px rgba(16, 43, 69, 0.08);
+  --shadow-lg: 0 12px 30px rgba(16, 43, 69, 0.12);
+  --shadow-xl: 0 20px 48px rgba(16, 43, 69, 0.16);
+  --shadow-gold: 0 4px 20px rgba(212, 175, 101, 0.28);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Max Widths */
+  --container-width: 1240px;
+  --container-narrow: 940px;
+}
+
+/* ==========================================================================
+   CSS RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+  background-color: var(--color-cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary-dark);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
+h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+h3 { font-size: clamp(1.35rem, 2.2vw, 1.8rem); }
+h4 { font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
+h5 { font-size: 1.15rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lead-text {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT UTILITIES
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-padding-sm {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* Background Variations */
+.bg-cream { background-color: var(--color-cream); }
+.bg-cream-light { background-color: var(--color-cream-light); }
+.bg-white { background-color: var(--color-white); }
+.bg-navy { 
+  background-color: var(--color-primary); 
+  color: var(--color-white);
+}
+.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4 {
+  color: var(--color-white);
+}
+.bg-navy p {
+  color: #CBD5E1;
+}
+
+/* ==========================================================================
+   SECTION HEADERS & EMBELLISHMENTS
+   ========================================================================== */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.5rem;
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-secondary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.bg-navy .eyebrow {
+  color: var(--color-secondary-light);
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.gold-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secondary-dark), var(--color-secondary-light));
+  margin: 1.25rem auto 1.5rem auto;
+  border-radius: var(--radius-full);
+}
+
+.text-left .gold-divider {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+/* Flex Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap-1 { gap: 1rem; }
+.gap-2 { gap: 2rem; }
+
+/* Visual Badges & Pills */
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-full);
+}
+
+.badge-gold {
+  background-color: var(--color-secondary-subtle);
+  color: var(--color-secondary-dark);
+  border: 1px solid var(--color-border-gold);
+}
+
+.badge-navy {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge-white {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Subtle Placeholder Callout */
+.placeholder-tag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px dashed #D97706;
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Visually Hidden Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

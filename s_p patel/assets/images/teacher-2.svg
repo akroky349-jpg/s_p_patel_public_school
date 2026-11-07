@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90E2" />
+      <stop offset="60%" stop-color="#BEE3F8" />
+      <stop offset="100%" stop-color="#EDF2F7" />
+    </linearGradient>
+    <linearGradient id="navyDeep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102B45" />
+      <stop offset="100%" stop-color="#081726" />
+    </linearGradient>
+    <linearGradient id="goldLuxe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3DC9B" />
+      <stop offset="50%" stop-color="#D4AF65" />
+      <stop offset="100%" stop-color="#9C782B" />
+    </linearGradient>
+    <linearGradient id="brickGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2847A" />
+      <stop offset="100%" stop-color="#B85449" />
+    </linearGradient>
+    <linearGradient id="stoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4EFE6" />
+      <stop offset="100%" stop-color="#D6CEBE" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBF8FF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#90CDF4" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="grassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#48BB78" />
+      <stop offset="100%" stop-color="#2F855A" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="cardDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F2438" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  
+  <rect width="500" height="600" fill="#064E3B" />
+  <circle cx="250" cy="220" r="140" fill="none" stroke="url(#goldLuxe)" stroke-width="3" />
+  <!-- Silhouette / Portrait -->
+  <circle cx="250" cy="180" r="60" fill="#F4B282" />
+  <!-- Hair / Glasses / Professional Garb -->
+  <path d="M 190 170 C 190 110, 230 95, 250 95 C 270 95, 310 110, 310 170 C 300 135, 280 120, 250 120 C 220 120, 200 135, 190 170 Z" fill="#334155" />
+  <!-- Formal Attire -->
+  <path d="M 140 380 C 160 270, 200 240, 250 240 C 300 240, 340 270, 360 380 Z" fill="#0B132B" stroke="url(#goldLuxe)" stroke-width="1.5" />
+  
+  <!-- Teacher Card Tag -->
+  <rect x="30" y="440" width="440" height="130" rx="8" fill="#FFFFFF" stroke="url(#goldLuxe)" stroke-width="2" filter="url(#cardDrop)" />
+  <text x="250" y="475" font-family="'Playfair Display', serif" font-size="18" font-weight="700" fill="#102B45" text-anchor="middle">[Faculty Member Name]</text>
+  <text x="250" y="505" font-family="'DM Sans', sans-serif" font-size="13" font-weight="600" fill="#D4AF65" text-anchor="middle">Senior Faculty - Chemistry &amp; Biology</text>
+  <text x="250" y="530" font-family="'DM Sans', sans-serif" font-size="12" fill="#64748B" text-anchor="middle">M.Sc., B.Ed. (Verified)</text>
+  <text x="250" y="552" font-family="'DM Sans', sans-serif" font-size="11" font-weight="500" fill="#102B45" text-anchor="middle">S. P. Patel Public School, Prayagraj</text>
+
+</svg>

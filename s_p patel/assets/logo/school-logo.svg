@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E7CA85" />
+      <stop offset="50%" stop-color="#D4AF65" />
+      <stop offset="100%" stop-color="#9C782B" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#163756" />
+      <stop offset="100%" stop-color="#0D2237" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Crest Graphic (Left side) -->
+  <g transform="translate(10, 10)" filter="url(#subtleShadow)">
+    <path d="M 50 2 C 78 2, 96 14, 96 32 C 96 68, 64 90, 50 98 C 36 90, 4 68, 4 32 C 4 14, 22 2, 50 2 Z" 
+          fill="url(#navyGrad)" stroke="url(#goldGrad)" stroke-width="3" />
+    
+    <path d="M 50 7 C 74 7, 90 18, 90 33 C 90 65, 62 84, 50 91 C 38 84, 10 65, 10 33 C 10 18, 26 7, 50 7 Z" 
+          fill="none" stroke="#D4AF65" stroke-width="1" stroke-dasharray="2,2" opacity="0.8" />
+
+    <path d="M 50 24 L 50 16 M 42 26 L 36 20 M 58 26 L 64 20 M 36 32 L 28 30 M 64 32 L 72 30" 
+          stroke="#E7CA85" stroke-width="1.5" stroke-linecap="round" opacity="0.75" />
+
+    <!-- Torch -->
+    <path d="M 47 44 L 53 44 L 51 58 L 49 58 Z" fill="url(#goldGrad)" />
+    <path d="M 45 42 L 55 42 L 53 45 L 47 45 Z" fill="#E7CA85" />
+    <path d="M 50 26 C 54 31, 56 36, 52 40 C 50 41.5, 48 39, 47 37 C 46 39, 44 41, 46 42 C 49 43, 51 43, 53 42 C 55 39, 56 33, 50 26 Z" 
+          fill="#FFB03A" />
+    <path d="M 50 29 C 52 33, 53 36, 51 39 C 49 40, 48 38, 48 36 Z" fill="#FFE58F" />
+
+    <!-- Open Book -->
+    <path d="M 50 63 C 44 59, 32 58, 22 62 L 22 75 C 32 71, 44 72, 50 76 C 56 72, 68 71, 78 75 L 78 62 C 68 58, 56 59, 50 63 Z" 
+          fill="#FFFFFF" stroke="#D4AF65" stroke-width="1.5" />
+    <line x1="50" y1="63" x2="50" y2="76" stroke="#9C782B" stroke-width="1.5" />
+
+    <!-- Laurel Leaves -->
+    <g fill="#D4AF65" opacity="0.9">
+      <path d="M 18 42 C 16 38, 21 37, 23 40 C 24 43, 20 45, 18 42 Z" />
+      <path d="M 17 50 C 14 47, 19 45, 22 48 C 23 51, 19 53, 17 50 Z" />
+      <path d="M 19 58 C 17 55, 21 53, 24 56 C 25 59, 21 61, 19 58 Z" />
+      <path d="M 82 42 C 84 38, 79 37, 77 40 C 76 43, 80 45, 82 42 Z" />
+      <path d="M 83 50 C 86 47, 81 45, 78 48 C 77 51, 81 53, 83 50 Z" />
+      <path d="M 81 58 C 83 55, 79 53, 76 56 C 75 59, 79 61, 81 58 Z" />
+    </g>
+
+    <!-- Star -->
+    <polygon points="50,6 52,11 57,11 53,14 55,19 50,16 45,19 47,14 43,11 48,11" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Typography Brand Lockup with generous width -->
+  <text x="120" y="48" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="700" fill="#102B45" letter-spacing="0.5">
+    S. P. PATEL PUBLIC SCHOOL
+  </text>
+  
+  <line x1="120" y1="62" x2="620" y2="62" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+  
+  <text x="122" y="80" font-family="'DM Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#D4AF65" letter-spacing="2.5">
+    BHANAURI, BELSARA, PRAYAGRAJ (U.P.)
+  </text>
+  <text x="122" y="98" font-family="'DM Sans', -apple-system, sans-serif" font-size="11" font-weight="500" fill="#5A6D80" letter-spacing="1">
+    INSPIRING MINDS • BUILDING FUTURES
+  </text>
+</svg>

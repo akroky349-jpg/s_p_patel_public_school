@@ -1,0 +1,434 @@
+/* ==========================================================================
+   S. P. PATEL PUBLIC SCHOOL — RESPONSIVE STYLESHEET
+   Breakpoints: 1200px (Laptop), 992px (Tablet landscape), 768px (Tablet portrait), 576px / 390px (Mobile)
+   ========================================================================== */
+
+/* Laptop & Medium Desktops (<= 1200px) */
+@media (max-width: 1200px) {
+  .nav-list {
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.88rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    gap: 2rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet Landscape & Below (<= 992px) */
+@media (max-width: 992px) {
+  .mobile-nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 34px !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+    margin-left: auto !important;
+    padding: 7px 6px !important;
+    background-color: var(--color-cream-light) !important;
+    border: 1px solid var(--color-border-gold) !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .mobile-nav-toggle .hamburger-line {
+    display: block !important;
+    width: 100% !important;
+    height: 2.5px !important;
+    background-color: #102B45 !important;
+    border-radius: 2px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .brand-logo {
+    max-width: calc(100% - 50px);
+  }
+
+  .brand-crest-img {
+    height: 48px;
+    max-width: 280px;
+  }
+
+  /* Off-canvas Mobile Menu Drawer */
+  .nav-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 5rem 1.75rem 2rem 1.75rem;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    transition: right var(--transition-normal);
+    z-index: 150;
+    overflow-y: auto;
+    gap: 1.5rem;
+  }
+
+  .nav-menu-wrapper.open {
+    right: 0;
+  }
+
+  /* Overlay backdrop for mobile menu */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 28, 44, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 140;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.85rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* Mobile Dropdown Behavior */
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-top: none;
+    padding: 0 0 0.5rem 1rem;
+    display: none;
+    background-color: var(--color-cream-light);
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-item.mobile-expanded .dropdown-menu {
+    display: block;
+  }
+
+  .nav-item.mobile-expanded .dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-link {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.88rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .header-actions .btn {
+    width: 100%;
+  }
+
+  /* Grids */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .principal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principal-img-col {
+    min-height: 380px;
+  }
+
+  .principal-content-col {
+    padding: 2.5rem 2rem;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .announcement-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+
+  .announcement-right {
+    display: none;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .brand-logo {
+    max-width: 240px;
+    flex-shrink: 1;
+  }
+
+  .mobile-nav-toggle {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
+/* Tablet Portrait & Mobile (<= 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .section-padding-sm {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.68rem;
+  }
+
+  .brand-crest-img {
+    height: 48px;
+  }
+
+  .hero-section {
+    min-height: 75vh;
+  }
+
+  .hero-content {
+    padding: 3rem 0;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.col-span-2 {
+    grid-column: span 1;
+  }
+
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .notice-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .search-box {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .filter-pills {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .notice-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .notice-item .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-prev-btn { left: 0.5rem; }
+  .lightbox-next-btn { right: 0.5rem; }
+}
+
+/* Small Mobile (<= 480px / 390px) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .announcement-inner {
+    padding: 0.25rem 0;
+  }
+
+  .announcement-badge {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .announcement-text {
+    font-size: 0.78rem;
+  }
+
+  .brand-crest-img {
+    height: 40px;
+    max-width: 240px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 0.98rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+
+  .stat-item {
+    min-width: 0;
+  }
+
+  .stat-num {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .btn {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .principal-content-col {
+    padding: 2rem 1.25rem;
+  }
+
+  .principal-quote {
+    font-size: 1.2rem;
+  }
+
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
+  }
+}
